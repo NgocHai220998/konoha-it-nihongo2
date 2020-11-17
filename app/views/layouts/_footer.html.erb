@@ -1,0 +1,40 @@
+<footer
+  style="padding: 30px 250px"
+  class="footer page-footer font-small unique-color-dark"
+>
+  <div class="footer-top">
+	<div class="container">
+	  <div class="row">
+		<div class="col-md-4 col-lg-4 footer-about wow fadeInUp">
+	    <%= image_tag "logo-big.svg" %>
+	    <p>
+		  <%= t ".intro" %>
+	    </p>
+		</div>
+		  <div
+			class="col-md-4 col-lg-4 offset-lg-1 footer-contact wow fadeInDown"
+		  >
+			<h3><%= t ".contact" %></h3>
+			<p>
+			  <i class="fas fa-map-marker-alt"></i> <%= Settings.content.address %>
+			</p>
+			<p><i class="fas fa-phone"></i> <%= t ".phone" %>: <%= Settings.content.phone %></p>
+			<p>
+			  <i class="fas fa-envelope"></i> <%= t ".email" %>:
+			  <a href="mailto:hello@domain.com"><%= Settings.content.email %></a>
+			</p>
+		  </div>
+		  <div class="col-md-4 col-lg-3 footer-social wow fadeInUp">
+		  <h3><%= t ".our_team" %></h3>
+		  <p>
+			<a href="#"><i class="fab fa-facebook"></i></a>
+			<a href="#"><i class="fab fa-twitter"></i></a>
+			<a href="#"><i class="fab fa-google-plus-g"></i></a>
+			<a href="#"><i class="fab fa-instagram"></i></a>
+			<a href="#"><i class="fab fa-pinterest"></i></a>
+		  </p>
+		</div>
+	  </div>
+    </div>
+  </div>
+</footer>
