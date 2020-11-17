@@ -1,0 +1,24 @@
+vi:
+  layouts:
+    header:
+      app_title: "木の葉"
+      about: "Thông tin"
+      contact: "Liên hệ"
+      help: "Trợ giúp"
+      home: "Trang chủ"
+      login: "Đăng nhập"
+      languages: "Ngôn Ngữ"
+      vietnamese: "Tiếng Việt"
+      japanese: "Tiếng Nhật"
+      account: "Tài khoản"
+      write: "Viết bài"
+      logout: "Đăng xuất"
+      profile: "Hồ sơ"
+      settings: "Cài đặt"
+    footer:
+      contact: "Liên hệ"
+      intro: "Chúng tôi với sức trẻ luôn tạo ra giá trị mới nhằm tạo ra một xã hội tốt đẹp hơn."
+      our_team: "Về chúng tôi"
+      address: "Địa chỉ"
+      email: "Email"
+      phone: "SĐT"

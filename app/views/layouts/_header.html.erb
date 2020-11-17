@@ -1,0 +1,42 @@
+  
+<nav style="padding: 0px 250px;" class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <%= image_tag "logo.svg" %>
+  <%= link_to t(".app_title"), root_path(locale), class: "navbar-brand ml-3", id: "logo" %>
+  <div class="collapse navbar-collapse" id="collapsibleNavId">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+    </ul>
+    <ul class="navbar-nav ml-auto my-2 my-lg-0 mr-3">
+      <li class="nav-item"><%= link_to t(".help"), root_path(locale), class: "nav-link" %></li>
+      <% if true %>
+        <div style="padding: 0 10px;">
+          <div style="display: flex; padding: 0 5px; background-color: #28a745; color: white; border-radius: 5px;">
+            <i style="line-height: 40px;" class="fas fa-quidditch"></i>
+            <li class="nav-item"><%= link_to t(".write"), root_path(locale), class: "nav-link", style: "color: white;" %></li>
+          </div>
+        </div>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <%= t ".account" %>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <%= link_to t(".profile"), root_path(locale), class: "dropdown-item" %>
+            <%= link_to t(".settings"), root_path(locale), class: "dropdown-item" %>
+            <div class="dropdown-divider"></div>
+            <%= link_to t(".logout"), root_path(locale), class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item"><%= link_to t(".login"), root_path(locale), class: "nav-link" %></li>
+      <% end %>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <%= t ".languages" %>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <%= link_to t(".japanese"), {locale: "ja"}, {class: "dropdown-item"} %>
+          <%= link_to t(".vietnamese"), {locale: "vi"}, {class: "dropdown-item"} %>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
