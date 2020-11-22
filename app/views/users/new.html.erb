@@ -1,0 +1,22 @@
+<div class="row align-items-sm-center" style="color: white; margin-top: 50px">
+  <div class="col-md-6" >
+    <h1>Xin chào!</h1>
+    <%= image_tag '/image/login_img.png'%>
+  </div>
+  <div class="col-md-6" style="background-color: #212529;border-radius: 5px">
+    <div style="margin: 30px 20px 30px 20px">
+      <%= form_for(@user) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label :name%>
+        <%= f.text_field :name, class: 'form-control' %>
+        <%= f.label :mail %>
+        <%= f.email_field :mail, class: 'form-control' %>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <%= f.submit "Đăng ký", class: "btn btn-success" %>
+      <% end %>
+    </div>
+  </div>
+</div>
