@@ -14,9 +14,13 @@
     <link href=<%= Settings.link.app.fontawesome %> rel="stylesheet">
   </head>
 
-  <body>
+  <body style="background-color: black">
     <%= render "layouts/header" %>
     <main class="container" id="main">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= message_type %>"><%= message %>
+        </div>
+      <% end %>
       <%= yield %>
     </main>
     <%= render "layouts/footer" %>

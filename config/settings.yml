@@ -9,4 +9,13 @@ content:
   address: "136 Xuan Thuy - Cau Giay - Ha Noi"
   phone: "(0039) 333 12 68 347"
   email: "konoha@gmail.com"
+model:
+  validates:
+    name:
+      maximum: 50
+    mail:
+      maximum: 255
+      valid_email_regex: '/\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i'
+    password:
+      minimum: 6
   
