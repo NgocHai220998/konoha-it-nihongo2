@@ -7,7 +7,7 @@
     <div style="margin: 30px 20px 30px 20px">
       <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
-        <%= f.label :name%>
+        <%= f.label :name %>
         <%= f.text_field :name, class: 'form-control' %>
         <%= f.label :mail %>
         <%= f.email_field :mail, class: 'form-control' %>
@@ -15,7 +15,7 @@
         <%= f.password_field :password, class: 'form-control' %>
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
-        <%= f.submit "Đăng ký", class: "btn btn-success" %>
+        <%= f.submit t(".signup"), class: "btn btn-success" %>
       <% end %>
     </div>
   </div>

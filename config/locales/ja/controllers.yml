@@ -1,0 +1,6 @@
+ja:
+  controllers:
+    sessions:
+      login_fail_danger: "メイルとかパスワードとか間違った。"
+    users:
+      signup_success: "木の葉へいってらっしゃい！"

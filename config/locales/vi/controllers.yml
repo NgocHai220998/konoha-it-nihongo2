@@ -1,0 +1,6 @@
+vi:
+  controllers:
+    sessions:
+      login_fail_danger: "Sai email hoặc mật khẩu"
+    users:
+      signup_success: "Chào mừng đến với konoha"

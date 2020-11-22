@@ -10,10 +10,10 @@
         <%=f.email_field :email, class:'form-control'%>
         <%= f.label :password %>
         <%= f.password_field :password, class:'form-control'%>
-        <%= link_to "Quên mật khẩu", "#" %>
+        <%= link_to t(".forgot"), "#" %>
         <br>
-        <%= f.submit "Đăng nhập" , class: "btn btn-success"%>
-        <%= link_to "Bạn chưa có tài khoản?", signup_path %>
+        <%= f.submit t(".signin") , class: "btn btn-success"%>
+        <%= link_to  t(".have_not_account"), signup_path %>
       <%end%>
     </div>
   </div>

@@ -1,0 +1,6 @@
+vi:
+  sessions:
+    new:
+      signin: "Đăng nhập"
+      forgot: "Quên mật khẩu?"
+      have_not_account: "Bạn chưa có tài khoản?"
