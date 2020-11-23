@@ -2,3 +2,16 @@ vi:
   users:
     new:
       signup: "Đăng ký"
+    edit:
+      edit_profile: "Cập nhật thông tin cá nhân"
+      commit: "Thông tin của bạn sẽ được bảo mật tuyệt đối"
+      profile_please: "Vui lòng cập nhật thông tin để tài khoản của bạn được an toàn"
+      username: "Nickname"
+      fullname: "Họ và tên"
+      age: "Tuổi"
+      gender: "Giới tính"
+      male: "Name"
+      female: "Nữ"
+      none: "Không xác định"
+      edit: "Cập nhật"
+      email: "Email"

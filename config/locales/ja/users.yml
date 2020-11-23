@@ -2,3 +2,16 @@ ja:
   users:
     new:
       signup: "登録"
+    edit:
+      edit_profile: "個人情報の更新"
+      commit: "あなたの情報は完全に機密になります"
+      profile_please: "アカウントを安全に保つために情報を更新してください"
+      username: "ニックネーム"
+      fullname: "名前"
+      age: "年齢"
+      gender: "性別"
+      male: "男性"
+      female: "女性"
+      none: "知らない"
+      edit: "確認"
+      email: "メールアドレス"
