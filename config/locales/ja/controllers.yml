@@ -4,3 +4,9 @@ ja:
       login_fail_danger: "メイルとかパスワードとか間違った。"
     users:
       signup_success: "木の葉へいってらっしゃい！"
+    password_resets:
+      send_reset_mail_success: "パスワードをリセットする手順が記載されたメールが送信されました。"
+      email_not_found: "メールが見つかりません。"
+      can_not_be_empty: "空にすることはできません。"
+      password_resetted: "パスワードがリセットされました。 ログインして開始。"
+      password_expired: "パスワードのリセットが期限切れになりました。"

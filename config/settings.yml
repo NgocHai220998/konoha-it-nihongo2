@@ -15,7 +15,7 @@ model:
       maximum: 50
     mail:
       maximum: 255
-      valid_email_regex: '/\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i'
+      valid_email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
     password:
       minimum: 6
   

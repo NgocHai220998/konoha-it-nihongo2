@@ -1,0 +1,4 @@
+ja:
+  user_mailer:
+    password_reset:
+      subject: "パスワードを再設定する"
