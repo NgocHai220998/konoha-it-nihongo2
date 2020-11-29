@@ -10,12 +10,20 @@ content:
   phone: "(0039) 333 12 68 347"
   email: "konoha@gmail.com"
 model:
-  validates:
-    name:
-      maximum: 50
-    mail:
-      maximum: 255
-      valid_email_regex: !ruby/regexp '/\A[\w+\-.]+@[a-z\d\-]+(\.[a-z\d\-]+)*\.[a-z]+\z/i'
-    password:
-      minimum: 6
+  user:
+    validates:
+      name:
+        maximum: 50
+      mail:
+        maximum: 255
+        valid_email_regex: !ruby/regexp '/\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i'
+      password:
+        minimum: 6
+  post:
+    validates:
+      content:
+        maximum: 1000
+      image_size:
+        maximum: 5
+        notifications_text: 'should be less than 5MB'
   

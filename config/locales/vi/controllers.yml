@@ -10,3 +10,5 @@ vi:
       can_not_be_empty: "không được trống"
       password_resetted: "Mật khẩu đã được đặt lại. đăng nhập để bắt đầu"
       password_expired: "Đường dẫn đặt lại mật khẩu đã hết hạn"
+    posts:
+      create_success: "Tạo bài post thành công!"

@@ -2,3 +2,9 @@ vi:
   posts:
     show:
       ago: "trước"
+    new:
+      create: "Tạo bài viết"
+      content_placeholder: "Viết nội dung ..."
+      image: "Hình ảnh"
+      content: "Nội dung"
+      typing: "Thể loại"

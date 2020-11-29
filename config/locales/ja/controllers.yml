@@ -10,3 +10,5 @@ ja:
       can_not_be_empty: "空にすることはできません。"
       password_resetted: "パスワードがリセットされました。 ログインして開始。"
       password_expired: "パスワードのリセットが期限切れになりました。"
+    posts:
+      create_success: "成功！"

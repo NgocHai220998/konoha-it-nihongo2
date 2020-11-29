@@ -1,1 +1,36 @@
-<h1><%= t ".hello" %></h1>
+<div style="padding: 10px">
+  <div class="slider">
+    <div id="demo" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="container row">
+            <%= render "static_pages/card" %>
+            <%= render "static_pages/card" %>
+            <%= render "static_pages/card" %>
+            <%= render "static_pages/card" %>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="container row">
+            <%= render "static_pages/card" %>
+            <%= render "static_pages/card" %>
+            <%= render "static_pages/card" %>
+            <%= render "static_pages/card" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="content row" style="padding: 15px;">
+    <div class="posts col-8">
+      <div>
+        <%= render "static_pages/card_post" %>
+        <%= render "static_pages/card_post" %>
+        <%= render "static_pages/card_post" %>
+      </div>
+    </div>
+    <div class="groups col-4">
+      <%= render "static_pages/groups" %>
+    </div>
+  </div>
+</div>

@@ -24,6 +24,8 @@ gem "jbuilder", "~> 2.7"
 gem "bcrypt"
 gem "rails-i18n"
 gem "config"
+gem "carrierwave"
+gem "mini_magick"
 
 gem 'font-awesome-sass'
 
