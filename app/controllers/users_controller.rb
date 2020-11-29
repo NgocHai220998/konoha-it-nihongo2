@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 		 flash[:success] = t "controllers.users.signup_success"
-		 redirect_to root_url
+		 redirect_to :back
 		else
 			render "new"
 		end
@@ -21,7 +21,7 @@ class UsersController < ApplicationController
 		@user = current_user
 		if @user.update_attributes(user_params)
 		    flash[:success] = t "controllers.users.edit_success"
-			redirect_to root_url
+			redirect_to 
 		else
 		    render 'edit'
 		end
@@ -30,6 +30,6 @@ class UsersController < ApplicationController
 	private
 	
 	def user_params
-		params.require(:user).permit(:name, :mail, :password, :password_confirmation, :nickname, :age)
+		params.require(:user).permit(:name, :mail, :password, :password_confirmation, :nickname, :age, :sex, :image)
 	end
 end

@@ -15,3 +15,6 @@ ja:
       none: "知らない"
       edit: "確認"
       email: "メールアドレス"
+      select_gender: "わからない"
+      edit_image: "アバターを変更する"
+      image_rule: "JPG、PNG、またはGIFの形式にして、最大サイズ5MB。"

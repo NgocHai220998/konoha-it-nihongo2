@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum sex: { male: 1, female: 2 }
+  # enum sex: { male: 1, female: 2 }
   has_many :posts, dependent: :destroy
   has_many :comments
   # see more about enum: 
@@ -19,4 +19,5 @@ class User < ApplicationRecord
       return false
     end
   end
+  has_one_attached :image
 end
