@@ -1,0 +1,72 @@
+<% 
+  def user_image_link(user_id) 
+    user = User.find_by(id: user_id)
+    link = user.image
+  end
+  def user_name(user_id) 
+    user = User.find_by(id: user_id)
+    name = user.name
+  end
+%>
+<h1>Post details</h1>
+
+<div class="row align-items-sm-center" style="color: white; margin-top: 50px;">
+  
+  <div class="col-md-8 bg-dark" >
+    <%# view about post user%>
+    <br>
+    <div class="card-user">
+      <%= image_tag(user_image_link(@post.user_id), class:"rounded-circle") %>  
+      <div>
+        <h6><%= user_name(@post.user_id) %></h6>
+        <%= @post.time + t('.ago') %>  
+      </div>
+    </div>
+    <br>
+    <%# view about this post %>
+    <p><%= image_tag(@post.image, class: "w-100") %></p>
+    <p><%= @post.content %></p>
+    
+    <%# view comment of this post %>
+    <div id="comments">
+      <% @comments.each do |comment| %>
+        <div class="row mb-2">
+          <div class="col-md-4 card-user justify-content-center">
+            <%= image_tag(user_image_link(comment.user_id), class:"rounded-circle") %>  
+            <div>
+              <h6><%= user_name(comment.user_id) %></h6>
+              <span class="time-ago"><%= comment.time + " " + t('.ago') %></span>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="comment_content bg-secondary rounded">
+              <%= comment.content %>
+            </div>
+          </div>
+        </div>
+      <%end %>
+    </div>
+
+    <%# show form input comment for this post %>
+    <% unless current_user.nil? %>
+      <%= form_for(@new_comment, url: comments_path, remote: true) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= f.hidden_field :post_id, value: @new_comment.post_id %>
+        <%= f.hidden_field :user_id, value: @new_comment.user_id %>
+        <div class="input-group mb-3">
+          <%= f.text_field :content, class: 'form-control', id: "input-comment",
+            placeholder: "comment..." %>
+          <div class="input-group-append">
+            <%= f.submit "Comment", 
+              class: "btn btn-success btn-outline-secondary" %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+  </div>
+  
+  <div class="col-md-4 bg-white" style="background-color: #212529; border-radius: 5px">
+    hien nguoi dung nhieu bai dang ?
+  </div>
+</div>
