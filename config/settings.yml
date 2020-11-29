@@ -24,6 +24,6 @@ model:
       content:
         maximum: 1000
       image_size:
-        maximum: 0.1
+        maximum: 5
         notifications_text: 'should be less than 5MB'
   
