@@ -6,12 +6,13 @@ class User < ApplicationRecord
   # https://edgeapi.rubyonrails.org/classes/ActiveRecord/Enum.html
   attr_accessor :password_confirmation
   before_save { self.mail = mail.downcase }
-  validates :name, presence: true, length: { maximum: Settings.model.validates.name.maximum }
+  valid_email_regex = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
+  validates :name, presence: true, length: { maximum: Settings.model.user.validates.name.maximum }
   validates :mail, presence: true,
-                    length: { maximum: Settings.model.validates.mail.maximum },
-                    format: { with: Settings.model.validates.mail.valid_email_regex },
+                    length: { maximum: Settings.model.user.validates.mail.maximum },
+                    format: { with: valid_email_regex },
                     uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: Settings.model.validates.password.minimum }, allow_blank: true, confirmation: true
+  validates :password, presence: true, length: { minimum: Settings.model.user.validates.password.minimum }, allow_blank: true, confirmation: true
   def authenticate(login_password)
     if login_password == password
       return true

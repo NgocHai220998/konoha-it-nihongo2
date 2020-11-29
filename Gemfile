@@ -24,6 +24,8 @@ gem "jbuilder", "~> 2.7"
 gem "bcrypt"
 gem "rails-i18n"
 gem "config"
+gem "carrierwave"
+gem "mini_magick"
 
 # Use Active Storage variant
 # gem "image_processing", "~> 1.2"

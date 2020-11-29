@@ -1,0 +1,8 @@
+ja:
+  posts:
+    new:
+      create: "ポストを作る"
+      content_placeholder: "内容を書く"
+      image: "イメージ"
+      content: "内容"
+      typing: "種類"

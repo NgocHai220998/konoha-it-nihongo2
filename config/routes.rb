@@ -9,5 +9,6 @@ Rails.application.routes.draw do
     delete "/logout", to: "sessions#destroy"
     get "/profile", to: "users#edit"
     post "/profile", to: "users#update"
+    resources :posts, only: [:index, :new, :create, :edit, :update, :delete]
   end
 end
