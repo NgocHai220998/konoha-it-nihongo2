@@ -4,5 +4,6 @@ vi:
       login_fail_danger: "Sai email hoặc mật khẩu"
     users:
       signup_success: "Chào mừng đến với konoha"
+      edit_success: "Cập nhật thông tin thành công!"
     posts:
       create_success: "Tạo bài post thành công!"

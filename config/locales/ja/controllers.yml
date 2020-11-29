@@ -6,3 +6,4 @@ ja:
       signup_success: "木の葉へいってらっしゃい！"
     posts:
       create_success: "成功！"
+      edit_success: "正常に更新されました!"
