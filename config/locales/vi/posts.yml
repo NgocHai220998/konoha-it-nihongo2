@@ -1,5 +1,7 @@
 vi:
   posts:
+    show:
+      ago: "trước"
     new:
       create: "Tạo bài viết"
       content_placeholder: "Viết nội dung ..."

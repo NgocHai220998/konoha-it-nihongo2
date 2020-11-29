@@ -1,0 +1,4 @@
+vi:
+  user_mailer:
+    password_reset:
+      subject: "Đặt lại mật khẩu"

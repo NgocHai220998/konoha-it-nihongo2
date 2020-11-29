@@ -1,0 +1,17 @@
+<% unless @comment.nil? %>
+  <% comment = @comment%>
+<% end %>
+<div class="row mb-2">
+  <div class="col-md-4 card-user pl-4">
+    <%= image_tag(user_image_link(comment.user_id), class:"rounded-circle") %>  
+    <div>
+      <h6><%= user_name(comment.user_id) %></h6>
+      <span class="time-ago"><%= comment.time + " " + t('.ago') %></span>
+    </div>
+  </div>
+  <div class="col-md-8">
+    <div class="comment_content bg-secondary rounded">
+      <%= comment.content %>
+    </div>
+  </div>
+</div>
