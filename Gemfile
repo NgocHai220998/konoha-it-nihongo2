@@ -25,6 +25,8 @@ gem "bcrypt"
 gem "rails-i18n"
 gem "config"
 
+gem 'font-awesome-sass'
+
 # Use Active Storage variant
 # gem "image_processing", "~> 1.2"
 

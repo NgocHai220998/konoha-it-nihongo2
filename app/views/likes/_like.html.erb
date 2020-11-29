@@ -1,0 +1,22 @@
+<div>
+  <i class="fa fa-thumbs-up mr-1" aria-hidden="true"></i>
+  <% if @likes.nil? %>
+    0
+  <% elsif %>
+    <%= @likes.count %>
+  <% end %>
+</div>
+<% unless current_user.nil? %>
+  <% if @like.new_record? %>
+    <%= form_for(@like, url: likes_path, remote: true) do |f| %>
+      <%= f.hidden_field :post_id, value: @like.post_id %>
+      <%= f.hidden_field :user_id, value: @like.user_id %>
+      <%= f.submit "Like", class: "btn bg-secondary"%>
+    <% end %>
+  <% else %>
+    <%= form_for(@like, url: like_path(@like),
+      method: :delete, remote: true) do |f| %>
+      <%= f.submit "Unlike", class: "btn bg-success"%>
+    <% end %>
+  <% end %>
+<% end %>

@@ -18,11 +18,14 @@
 @import 'common/typography';
 @import 'layout/header';
 @import 'layout/footer';
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 #main {
   min-height: 70vh;
 }
 
+//------------------------------
 .card-user{
   display: flex;
   height: 60px;
@@ -43,3 +46,40 @@
   font-size: 13px;
   color:aliceblue;
 }
+// ----------------------------
+.like-and-comment{
+  display: flex;
+  color:black;
+  align-items: stretch;
+}
+.like-and-comment>div{
+  flex-grow: 1;
+  text-align: center;
+  padding:7px;
+  background-color: white;
+  border-radius: 5px;
+}
+#like_info{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#comment_info:hover{
+  background-color: #dddd!important;
+}
+#comment_info{
+  position: relative;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#comment_info>label{
+  position: absolute;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+}
+

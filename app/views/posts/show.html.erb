@@ -2,6 +2,7 @@
   def user_image_link(user_id) 
     user = User.find_by(id: user_id)
     link = user.image
+    link ||= "user.jpg"
   end
   def user_name(user_id) 
     user = User.find_by(id: user_id)
@@ -19,7 +20,7 @@
       <%= image_tag(user_image_link(@post.user_id), class:"rounded-circle") %>  
       <div>
         <h6><%= user_name(@post.user_id) %></h6>
-        <%= @post.time + t('.ago') %>  
+        <%= @post.time + " " + t('.ago') %>  
       </div>
     </div>
     <br>
@@ -27,23 +28,22 @@
     <p><%= image_tag(@post.image, class: "w-100") %></p>
     <p><%= @post.content %></p>
     
+    <%# like and comment this post %>
+    <hr>
+    <div class="like-and-comment">
+      <div id="like_info">
+        <%= render "likes/like" %>
+      </div>
+      <div id="comment_info">
+        <%= render "comments/count" %>
+      </div>
+    </div>
+    <hr>
+
     <%# view comment of this post %>
     <div id="comments">
       <% @comments.each do |comment| %>
-        <div class="row mb-2">
-          <div class="col-md-4 card-user justify-content-center">
-            <%= image_tag(user_image_link(comment.user_id), class:"rounded-circle") %>  
-            <div>
-              <h6><%= user_name(comment.user_id) %></h6>
-              <span class="time-ago"><%= comment.time + " " + t('.ago') %></span>
-            </div>
-          </div>
-          <div class="col-md-8">
-            <div class="comment_content bg-secondary rounded">
-              <%= comment.content %>
-            </div>
-          </div>
-        </div>
+        <%= render comment %>
       <%end %>
     </div>
 

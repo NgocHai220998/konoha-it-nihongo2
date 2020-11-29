@@ -2,6 +2,8 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(comment_params)
     @comment.save
+    @comments = Post.find_by(id: @comment.post_id).comments
+    comment = @comment
     respond_to do |format|
       format.html { redirect_to @comment.post }
       format.js

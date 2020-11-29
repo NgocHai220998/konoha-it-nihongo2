@@ -1,7 +1,8 @@
 class User < ApplicationRecord
   enum sex: { male: 1, female: 2 }
   has_many :posts, dependent: :destroy
-  has_many :comments
+  has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
   # see more about enum: 
   # https://edgeapi.rubyonrails.org/classes/ActiveRecord/Enum.html
   attr_accessor :password_confirmation, :reset_token
