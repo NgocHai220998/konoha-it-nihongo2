@@ -12,3 +12,4 @@ ja:
       password_expired: "パスワードのリセットが期限切れになりました。"
     posts:
       create_success: "成功！"
+      edit_success: "正常に更新されました!"

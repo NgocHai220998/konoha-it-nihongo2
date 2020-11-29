@@ -4,6 +4,7 @@ vi:
       login_fail_danger: "Sai email hoặc mật khẩu"
     users:
       signup_success: "Chào mừng đến với konoha"
+      edit_success: "Cập nhật thông tin thành công!"
     password_resets:
       send_reset_mail_success: "Email kèm theo hướng dẫn đặt lại mật khẩu đã được gửi"
       email_not_found: "Không tìm thấy email"

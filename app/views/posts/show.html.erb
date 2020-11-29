@@ -1,7 +1,7 @@
 <% 
   def user_image_link(user_id) 
     user = User.find_by(id: user_id)
-    link = user.image
+    link = user.image if user.image.attached?
     link ||= "user.jpg"
   end
   def user_name(user_id) 

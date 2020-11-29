@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  enum sex: { male: 1, female: 2 }
+  # enum sex: { male: 1, female: 2 }
   has_many :posts, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
@@ -54,4 +54,5 @@ class User < ApplicationRecord
   def password_reset_expired? 
     reset_sent_at < 2.hours.ago
   end
+  has_one_attached :image
 end
