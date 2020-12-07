@@ -2,3 +2,8 @@ vi:
   static_pages:
     home:
       hello: "Xin chào!"
+    groups:
+      users_most_active: "Người dùng tích cực nhất"
+      posts: "Bài viết"
+    card:
+      details: "Chi tiết..."  

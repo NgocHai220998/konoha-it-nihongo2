@@ -2,3 +2,8 @@ ja:
   static_pages:
     home:
       hello: "こんにちは！"
+    groups:
+      users_most_active: "積極的な活動の客様"
+      posts: "記事"
+    card:
+      details: "細かい..."

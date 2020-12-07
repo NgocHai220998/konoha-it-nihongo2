@@ -1,0 +1,29 @@
+<div class="wrapper">
+  <div class="user">
+    <div class="avatar">
+        <% if post.user.image.attached? %>
+        <%= image_tag post.user.image, :style => "width: 40px; height: 40px; border-radius: 5px;" %>
+        <% end %>
+    </div>
+    <div class="user-name">
+      <div>
+        <a href= "" ><span style="font-weight: bold;"><%= post.user.nickname %></span></a>
+      </div>
+      <div>
+        <span class="time" style="font-size: 13px; color: #606770;"><%= time_ago_in_words(post.created_at) %></span>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="content">
+    <p style="font-size: 14px; box-sizing: border-box; padding: 0 10px;">
+      <%= post.content %>
+    </p>
+    <%=link_to t(".details"), post%>
+  </div>
+  <div class="img-post">
+      <%= image_tag post.image_url, :style => "width: 100%; height: 100%; border-radius: 5px;" %>
+  </div>
+  <div class="interactive">
+  </div>
+</div>
