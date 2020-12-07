@@ -1,7 +1,7 @@
 ja:
   controllers:
     sessions:
-      login_fail_danger: "メイルとかパスワードとか間違った。"
+      login_fail_danger: "間違ったメールアドレスまたはパスワードを入力しました。"
     users:
       signup_success: "木の葉へいってらっしゃい！"
     password_resets:
@@ -11,5 +11,5 @@ ja:
       password_resetted: "パスワードがリセットされました。 ログインして開始。"
       password_expired: "パスワードのリセットが期限切れになりました。"
     posts:
-      create_success: "成功！"
-      edit_success: "正常に更新されました!"
+      create_success: "ポストを作成できました！"
+      edit_success: "編集できました!"
