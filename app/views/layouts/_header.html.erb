@@ -33,8 +33,8 @@
           <%= t ".languages" %>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <%= link_to t(".japanese"), {locale: "ja"}, {class: "dropdown-item"} %>
-          <%= link_to t(".vietnamese"), {locale: "vi"}, {class: "dropdown-item"} %>
+          <%= link_to t(".japanese"), request.params.merge(locale:'ja'), {class: "dropdown-item"} %>
+          <%= link_to t(".vietnamese"), request.params.merge(locale:'vi'), {class: "dropdown-item"} %>
         </div>
       </li>
     </ul>

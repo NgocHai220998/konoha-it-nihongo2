@@ -1,5 +1,7 @@
 ja:
   posts:
+    show:
+      ago: "前"
     new:
       create: "ポストを作る"
       content_placeholder: "内容を書く"

@@ -1,4 +1,4 @@
 ja:
   user_mailer:
     password_reset:
-      subject: "パスワードをリセットします。"
+      subject: "パスワードを再設定する"

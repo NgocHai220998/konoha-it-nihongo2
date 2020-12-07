@@ -16,6 +16,15 @@ class PostsController < ApplicationController
 		end
 	end
 	
+	def show
+    @post = Post.find_by(id: params[:id])
+    @comments = @post.comments
+    @likes = @post.likes
+    @like = Like.find_by({user_id: current_user&.id, post_id: @post.id})
+    @like ||= Like.new({user_id: current_user&.id, post_id: @post.id})
+    @new_comment = Comment.new({user_id: current_user&.id, post_id: @post.id})
+	end
+	
 	private
 	
 	def post_params

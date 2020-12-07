@@ -5,5 +5,11 @@ vi:
     users:
       signup_success: "Chào mừng đến với konoha"
       edit_success: "Cập nhật thông tin thành công!"
+    password_resets:
+      send_reset_mail_success: "Email kèm theo hướng dẫn đặt lại mật khẩu đã được gửi"
+      email_not_found: "Không tìm thấy email"
+      can_not_be_empty: "không được trống"
+      password_resetted: "Mật khẩu đã được đặt lại. đăng nhập để bắt đầu"
+      password_expired: "Đường dẫn đặt lại mật khẩu đã hết hạn"
     posts:
       create_success: "Tạo bài post thành công!"

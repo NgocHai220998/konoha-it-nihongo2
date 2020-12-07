@@ -5,11 +5,11 @@ ja:
     users:
       signup_success: "木の葉へいってらっしゃい！"
     password_resets:
-      send_reset_mail_success: "まだパスワードの再設定は完了していません。メールアドレスに送信されたURLをクリックして再設定を行なってください。"
-      email_not_found: "メールアドレスが存在していません!。"
-      can_not_be_empty: "必要があります"
-      password_resetted: "パスワードがリセットされました。"
-      password_expired: "パスワードのリセットが既に期限切れしました。"
+      send_reset_mail_success: "パスワードをリセットする手順が記載されたメールが送信されました。"
+      email_not_found: "メールが見つかりません。"
+      can_not_be_empty: "空にすることはできません。"
+      password_resetted: "パスワードがリセットされました。 ログインして開始。"
+      password_expired: "パスワードのリセットが期限切れになりました。"
     posts:
       create_success: "ポストを作成できました！"
       edit_success: "編集できました!"

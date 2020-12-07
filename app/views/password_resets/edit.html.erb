@@ -1,0 +1,19 @@
+<div class="row align-items-sm-center" style="color: white; margin-top: 50px;">
+  <div class="col-md-6" >
+    <h1><%= t ".reset_password"%></h1>
+    <%= image_tag '/image/login_img.png'%>
+  </div>
+  <div class="col-md-6" style="background-color: #212529; border-radius: 5px">
+    <div style="margin: 30px 20px 30px 20px">
+      <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
+        <%= hidden_field_tag :email, @user.mail %>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: 'form-control' %>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, class: 'form-control' %>
+        <%= f.submit t(".update_password"), class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
