@@ -17,7 +17,7 @@
     <%# view about post user%>
     <br>
     <div class="card-user">
-      <%= image_tag(user_image_link(@post.user_id), class:"rounded-circle") %>  
+      <%= image_tag(user_image_link(@post.user_id), class:"rounded-circle ") %>  
       <div>
         <h6><%= user_name(@post.user_id) %></h6>
         <%= @post.time + " " + t('.ago') %>  
@@ -25,7 +25,8 @@
     </div>
     <br>
     <%# view about this post %>
-    <p><%= image_tag(@post.image_url, class: "w-100") %></p>
+    <h3 class="center"><%= @post.title %></h3><br/>
+    <p><%= image_tag(@post.image_url, class: "w-100 img-fluid rounded") %></p>
     <p><%= @post.content %></p>
     
     <%# like and comment this post %>

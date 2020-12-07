@@ -8,12 +8,32 @@ class User < ApplicationRecord
   attr_accessor :password_confirmation, :reset_token
   before_save { self.mail = mail.downcase }
   valid_email_regex = /\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i
-  validates :name, presence: true, length: { maximum: Settings.model.user.validates.name.maximum }
+
+  validates :nickname, 
+            length: { maximum: Settings.model.user.validates.nickname.maximum }
+  validates :name, presence: true, 
+            length: { maximum: Settings.model.user.validates.name.maximum }
   validates :mail, presence: true,
-                    length: { maximum: Settings.model.user.validates.mail.maximum },
-                    format: { with: valid_email_regex },
-                    uniqueness: { case_sensitive: false }
-  validates :password, presence: true, length: { minimum: Settings.model.user.validates.password.minimum }, allow_blank: true, confirmation: true
+            length: { maximum: Settings.model.user.validates.mail.maximum },
+            format: { with: valid_email_regex },
+            uniqueness: { case_sensitive: false }
+  validates :password, presence: true, 
+            length: { 
+              minimum: Settings.model.user.validates.password.minimum,
+              maximum: Settings.model.user.validates.password.maximum
+            }, 
+            allow_blank: true, 
+            confirmation: true
+  has_one_attached :image
+  validates :image, content_type: [:png, :jpg, :jpeg, :gif],
+            size: { 
+              less_than: Settings.model.user.validates.image.maximum.megabytes
+            }
+  validates :age,
+            length: { 
+              minimum: Settings.model.user.validates.age.minimum,
+              maximum: Settings.model.user.validates.age.maximum
+            }
   def authenticate(login_password)
     if login_password == password
       return true
@@ -54,5 +74,5 @@ class User < ApplicationRecord
   def password_reset_expired? 
     reset_sent_at < 2.hours.ago
   end
-  has_one_attached :image
+
 end

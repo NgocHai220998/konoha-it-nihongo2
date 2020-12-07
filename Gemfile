@@ -26,6 +26,7 @@ gem "rails-i18n"
 gem "config"
 gem "carrierwave"
 gem "mini_magick"
+gem 'active_storage_validations'
 
 gem 'font-awesome-sass'
 

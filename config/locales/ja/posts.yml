@@ -8,3 +8,5 @@ ja:
       image: "イメージ"
       content: "内容"
       typing: "種類"
+      title: "題名"
+      title_placeholder: "題名を書く"

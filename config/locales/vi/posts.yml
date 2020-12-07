@@ -8,3 +8,5 @@ vi:
       image: "Hình ảnh"
       content: "Nội dung"
       typing: "Thể loại"
+      title: "Tiêu đề"
+      title_placeholder: "Viết tiêu đề..."

@@ -256,3 +256,17 @@
         }
     }
 }
+
+// css for avatar user
+.img-user{
+    height: 180px;
+    width: 180px;
+}
+.label-to-select-user-img{
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    font-size: 0;
+    cursor: pointer;
+}

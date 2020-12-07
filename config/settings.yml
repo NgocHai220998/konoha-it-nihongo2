@@ -12,6 +12,8 @@ content:
 model:
   user:
     validates:
+      nickname:
+        maximum: 50
       name:
         maximum: 50
       mail:
@@ -19,11 +21,23 @@ model:
         valid_email_regex: !ruby/regexp '/\A([\w+\-].?)+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i'
       password:
         minimum: 6
+        maximum: 255
+      image:
+        maximum: 5
+      age:
+        maximum: 150
+        minimum: 1
   post:
     validates:
       content:
-        maximum: 1000
+        maximum: 2000
       image_size:
         maximum: 5
         notifications_text: 'should be less than 5MB'
+      title:
+        maximum: 150
+  comment:
+    validates:
+      content:
+        maximum: 255
   

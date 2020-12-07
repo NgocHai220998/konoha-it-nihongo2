@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 		@user = User.new(user_params)
 		if @user.save
 		 flash[:success] = t "controllers.users.signup_success"
-		 redirect_to :back
+		 redirect_to login_path
 		else
 			render "new"
 		end
