@@ -49,7 +49,9 @@ class User < ApplicationRecord
     return false if digest.nil?
     BCrypt::Password.new(digest).is_password?(token)
   end
-
+  def count_likes
+    return likes.count
+  end
    # Returns true if a password reset has expired.
   def password_reset_expired? 
     reset_sent_at < 2.hours.ago

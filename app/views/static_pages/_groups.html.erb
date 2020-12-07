@@ -1,103 +1,21 @@
 <div class="home-right container" style="padding-top: 20px">
-    <div style="margin-bottom: 30px;"><h3>積極的な活動の客様</h3></div>
+  <div style="margin-bottom: 30px;"><h3> <%= t ".users_most_active" %></h3></div>
+  <% @users_most_active.first(5).each do |user| %> 
     <div class="content">
         <div class="item">
             <div class="image">
-                <%= image_tag "avatar.jpg", :style => "width: 66px; height: 66px; border-radius: 5px;" %>
+                <%= image_tag user.image, :style => "width: 66px; height: 66px; border-radius: 5px;" %>
             </div>
             <div class="info">
                 <p class="name">
-                    グエン・ゴック・ハイ
+                    <%= user.nickname %>
                 </p>
                 <span class="total-post">
-                    3.5m 文書
-                </span>
-            </div>
-            <br>
-        </div>
-        <div class="item">
-            <div class="image">
-                <%= image_tag "avatar.jpg", :style => "width: 66px; height: 66px; border-radius: 5px;" %>
-            </div>
-            <div class="info">
-                <p class="name">
-                    グエン・ゴック・ハイ
-                </p>
-                <span class="total-post">
-                    3.5m 文書
-                </span>
-            </div>
-            <br>
-        </div>
-        <div class="item">
-            <div class="image">
-                <%= image_tag "avatar.jpg", :style => "width: 66px; height: 66px; border-radius: 5px;" %>
-            </div>
-            <div class="info">
-                <p class="name">
-                    グエン・ゴック・ハイ
-                </p>
-                <span class="total-post">
-                    3.5m 文書
-                </span>
-            </div>
-            <br>
-        </div>
-        <div class="item">
-            <div class="image">
-                <%= image_tag "avatar.jpg", :style => "width: 66px; height: 66px; border-radius: 5px;" %>
-            </div>
-            <div class="info">
-                <p class="name">
-                    グエン・ゴック・ハイ
-                </p>
-                <span class="total-post">
-                    3.5m 文書
-                </span>
-            </div>
-            <br>
-        </div>
-        <div class="item">
-            <div class="image">
-                <%= image_tag "avatar.jpg", :style => "width: 66px; height: 66px; border-radius: 5px;" %>
-            </div>
-            <div class="info">
-                <p class="name">
-                    グエン・ゴック・ハイ
-                </p>
-                <span class="total-post">
-                    3.5m 文書
-                </span>
-            </div>
-            <br>
-        </div>
-        <div class="item">
-            <div class="image">
-                <%= image_tag "avatar.jpg", :style => "width: 66px; height: 66px; border-radius: 5px;" %>
-            </div>
-            <div class="info">
-                <p class="name">
-                    グエン・ゴック・ハイ
-                </p>
-                <span class="total-post">
-                    3.5m 文書
-                </span>
-            </div>
-            <br>
-        </div>
-        <div class="item">
-            <div class="image">
-                <%= image_tag "avatar.jpg", :style => "width: 66px; height: 66px; border-radius: 5px;" %>
-            </div>
-            <div class="info">
-                <p class="name">
-                    グエン・ゴック・ハイ
-                </p>
-                <span class="total-post">
-                    3.5m 文書
+                    <%= user.posts.count.to_s + " " + t(".posts")%> 
                 </span>
             </div>
             <br>
         </div>
     </div>
+  <% end %>
 </div>

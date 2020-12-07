@@ -8,3 +8,5 @@ ja:
       image: "イメージ"
       content: "内容"
       typing: "種類"
+    post:
+      details: "細かい"

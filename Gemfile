@@ -26,6 +26,8 @@ gem "rails-i18n"
 gem "config"
 gem "carrierwave"
 gem "mini_magick"
+gem "will_paginate"
+gem "bootstrap-will_paginate"
 
 gem 'font-awesome-sass'
 
