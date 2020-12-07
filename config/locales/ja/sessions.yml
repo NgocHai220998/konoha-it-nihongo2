@@ -2,5 +2,5 @@ ja:
   sessions:
     new:
       signin: "ログイン"
-      forgot: "パスワードを忘れたか？"
-      have_not_account: "アカウントがまだないか？"
+      forgot: "パスワードを忘れた場合"
+      have_not_account: "登録"

@@ -3,7 +3,7 @@ ja:
     header:
       app_title: "木の葉"
       about: "情報"
-      contact: "連絡"
+      contact: "お問い合わせ"
       help: "助け"
       home: "ホーム"
       login: "ログイン"
@@ -11,12 +11,12 @@ ja:
       english: "英語"
       japanese: "日本語"
       account: "アカウント"
-      write: "書くこと"
+      write: "ポストを作る"
       logout: "ログアウト"
       profile: "プロフィール"
       settings: "設定"
     footer:
-      contact: "連絡"
+      contact: "お問い合わせ"
       intro: "私たちは常に新しい創造的なアイデアを探している若い会社であり、あなたの日常業務で私たちの製品を支援します。"
       our_team: "私たちに"
       address: "住所"
