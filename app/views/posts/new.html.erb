@@ -4,8 +4,12 @@
       <h1> <%= t(".create")%></h1>
       <%= form_for(@post,html: { multipart: true }) do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
+        <%= f.label t(".title") %>
+        <%= f.text_area(:title, placeholder: t(".title_placeholder"),
+                    cols: 40, rows: 1, class: 'form-control')%>
         <%= f.label t(".content") %>
-        <%= f.text_area(:content, placeholder: t(".content_placeholder"),cols: 40, rows: 10, class: 'form-control') %>
+        <%= f.text_area(:content, placeholder: t(".content_placeholder"),
+                    cols: 40, rows: 10, class: 'form-control') %>
         <%= f.label t(".image") %>
         <span class="image">
           <%= f.file_field :image, accept: 'image/jpeg,image/gif,image/png' ,class: 'form-control'%>

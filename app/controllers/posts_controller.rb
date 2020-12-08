@@ -28,7 +28,7 @@ class PostsController < ApplicationController
 	private
 	
 	def post_params
-		postparam = params.require(:post).permit(:typing, :content, :image)
+		postparam = params.require(:post).permit(:typing, :content, :image, :title)
 		postparam['typing'] = postparam['typing'].to_i
 		return postparam
 	end

@@ -6,30 +6,34 @@
     </div>
     
     <div style="margin: 30px 20px 30px 20px">
-      <div style="color:#41ff6c; margin-bottom:10px">
+      <div style="color:#41ff6c; margin-bottom:10px" class="center">
           <%= t ".profile_please" %>
       </div>
         
       <%= form_for(@user, url:profile_path, method:"post" ) do |f|%>
-        <div class="row  align-items-sm-center" style="margin-bottom: 20px">
-          <div class="col-md-2">
-            <% if @user.image.attached? %>
-            <%= image_tag @user.image, :class => "rounded-circle", :style => "width: 100%" %>
-            <% end %>
-          </div>
-          <div class="col-md-10">
-            <p style="margin:0px; padding:0px"><%= f.label t(".edit_image") %></p>
-            <p style="font-size:15px; color:#9a9292; margin:0; padding:0"><%= f.label t(".image_rule") %></p>
-            <%= f.file_field :image%>
-          </div>
+        <%= render 'shared/error_messages', object: f.object %>
+
+        <div class="row  justify-content-center mt-4" 
+            style="margin-bottom: 20px; position: relative;">
+          <%= image_tag(avatar_url(@user), 
+                  class:"img-user rounded-circle", id: 'img_prev')%>
+          <%= f.label :image, class:"label-to-select-user-img" %>
+          <%= f.file_field :image, 
+                  accept:  'image/jpeg,image/gif,image/png,image/jpg', 
+                  class: 'form-control mb-2 photo_upload d-none'%>
         </div>
 
-        <%= f.label t(".username") %>
-        <%=f.text_field :nickname, class:'form-control', value:current_user.nickname %>
-        <%= f.label t(".fullname") %>
-        <%=f.text_field :name, class:'form-control', value:current_user.name %>
+        <div class="mt-4">
+          <%= f.label t(".username") %>
+          <%=f.text_field :nickname, class:'form-control', value:current_user.nickname %>
+        </div>
+
+        <div class="mt-4">
+          <%= f.label t(".fullname") %>
+          <%=f.text_field :name, class:'form-control', value:current_user.name %>
+        </div>
         
-        <div class="row  align-items-sm-center">
+        <div class="row  align-items-sm-center mt-4">
           <div class="col-md-6">
           <%= f.label t(".age") %>
           <%=f.number_field :age, class:'form-control', value:current_user.age%>
@@ -37,14 +41,19 @@
           <div class="col-md-6">
             <div><%= f.label t(".gender") %></div>
             <div></div>
-            <%= f.select(:sex, options_for_select([[t(".male"), '1'], [t(".female"), '2']], @user.sex), {:prompt => t(".select_gender")})%>          
+            <%= f.select(:sex, 
+              options_for_select([[t(".male"), '1'], [t(".female"), '2']], @user.sex), 
+              {:prompt => t(".select_gender")},
+              {:class => 'form-control'})%>          
           </div>
         </div>
         
-        <%= f.label t(".email") %>
-        <%= f.email_field :email, class:'form-control', value:current_user.mail%>
+        <div class="mt-4">
+          <%= f.label t(".email") %>
+          <%= f.email_field :email, class:'form-control', value:current_user.mail%>
+        </div>
         
-        <div style="margin-top:10px">
+        <div class="d-flex justify-content-center mt-4">
           <%= f.submit t(".edit") , class: "btn btn-success"%>
         </div>
       <%end%>
@@ -55,3 +64,22 @@
     <!--<%= image_tag '/image/login_img.png'%>-->
   <!--</div>-->
 </div>
+
+
+<!-- Assume jQuery is loaded -->
+<script>
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        $('#img_prev').attr('src', e.target.result)
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  $(".photo_upload").change(function(){
+    readURL(this);
+  });
+</script>

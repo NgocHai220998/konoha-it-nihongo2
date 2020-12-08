@@ -5,8 +5,11 @@ class Post < ApplicationRecord
   has_many :likes, dependent: :destroy
   enum typing: { share: 1, ask: 2 }
   mount_uploader :image, ImageUploader
+  validates :title, presence: true, 
+            length: { maximum: Settings.model.post.validates.title.maximum }
   validates :user_id, presence: true
-  validates :content, presence: true, length: { maximum: Settings.model.post.validates.content.maximum }
+  validates :content, presence: true, 
+            length: { maximum: Settings.model.post.validates.content.maximum }
   validate :image_size
   
   def time

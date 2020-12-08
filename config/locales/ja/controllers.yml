@@ -4,6 +4,7 @@ ja:
       login_fail_danger: "間違ったメールアドレスまたはパスワードを入力しました。"
     users:
       signup_success: "木の葉へいってらっしゃい！"
+      edit_success: "編集の成功！"
     password_resets:
       send_reset_mail_success: "パスワードをリセットする手順が記載されたメールが送信されました。"
       email_not_found: "メールが見つかりません。"

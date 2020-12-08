@@ -5,7 +5,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :mail
       t.string :name
       t.integer :sex
-      t.integer :age
+      t.integer :age, :default => 18
       t.string :image
       t.string :password
 
