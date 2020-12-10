@@ -20,6 +20,15 @@
 @import 'layout/footer';
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "posts";
+
+.interactive {
+    margin: 15px!important;
+}
+
+.wrapper, .home-right.container {
+    border-radius: 4px;
+}
 
 #main {
   min-height: 70vh;

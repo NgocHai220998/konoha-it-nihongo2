@@ -9,11 +9,9 @@
     name = user.name
   end
 %>
-<h1>Post details</h1>
-
 <div class="row align-items-sm-center" style="color: white; margin-top: 50px;">
   
-  <div class="col-md-8 bg-dark" >
+  <div class="col-md-8 bg-dark container-detail-post" >
     <%# view about post user%>
     <br>
     <div class="card-user">
@@ -26,7 +24,11 @@
     <br>
     <%# view about this post %>
     <h3 class="center"><%= @post.title %></h3><br/>
-    <p><%= image_tag(@post.image_url, class: "w-100 img-fluid rounded") %></p>
+    <p>
+      <% if @post.image_url %>
+        <%= image_tag(@post.image_url, class: "w-100 img-fluid rounded") %>
+      <% end %>
+    </p>
     <p><%= @post.content %></p>
     
     <%# like and comment this post %>
@@ -67,7 +69,7 @@
 
   </div>
   
-  <div class="col-md-4 bg-white" style="background-color: #212529; border-radius: 5px">
-    hien nguoi dung nhieu bai dang ?
-  </div>
+  <!--<div class="col-md-4 bg-white" style="background-color: #212529; border-radius: 5px">-->
+  <!--  hien nguoi dung nhieu bai dang ?-->
+  <!--</div>-->
 </div>

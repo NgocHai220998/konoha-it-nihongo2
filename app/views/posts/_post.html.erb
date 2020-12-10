@@ -1,4 +1,4 @@
-<div class="wrapper">
+<div class="wrapper my-posts">
   <div class="user">
     <div class="avatar">
         <% if post.user.image.attached? %>
@@ -19,10 +19,14 @@
     <p style="font-size: 14px; box-sizing: border-box; padding: 0 10px;">
       <%= post.content %>
     </p>
-    <%=link_to t(".details"), post%>
+    <div class="detail-link">
+      <%= link_to t(".details"), post%>
+    </div>
   </div>
   <div class="img-post">
-      <%= image_tag post.image_url, :style => "width: 100%; height: 100%; border-radius: 5px;" %>
+      <% if post.image_url %>
+        <%= image_tag post.image_url, :style => "width: 100%; height: 100%; border-radius: 5px;" %>
+      <% end %>
   </div>
   <div class="interactive">
   </div>
