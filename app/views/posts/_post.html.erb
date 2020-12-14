@@ -16,11 +16,13 @@
   </div>
   <hr>
   <div class="content">
-    <% if(post.typing == 'ask') %>
+    <div class="container">
+      <% if(post.typing == 'ask') %>
       <span class="badge badge-primary float-right">Ask</span>
-    <%else%>
-      <span class="badge badge-success float-right">Share</span>
-    <%end%>
+      <%else%>
+        <span class="badge badge-success float-right">Share</span>
+      <%end%>
+    </div>
     <h2 style="box-sizing: border-box; padding-top: 10px;"><%= post.title if post.title.present? %></h2>
     <p style="font-size: 14px; box-sizing: border-box; padding: 0 10px;">
       <%= post.content %>
