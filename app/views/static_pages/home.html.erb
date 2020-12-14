@@ -10,6 +10,7 @@
     <div class="posts col-8">
         <% if @posts.any? %>
           <%= render @posts %>
+          <%= will_paginate @posts, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
         <% end %>
     </div>
     <div class="groups col-4">

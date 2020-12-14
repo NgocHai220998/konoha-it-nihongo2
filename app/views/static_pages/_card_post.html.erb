@@ -79,3 +79,84 @@
     <div class="line-long" id="123"></div>
   </div>
 </div>
+<div class="wrapper">
+  <div class="user">
+    <div class="avatar">
+        <%= image_tag "avatar.jpg", :style => "width: 40px; height: 40px; border-radius: 5px;" %>
+    </div>
+    <div class="user-name">
+      <div>
+        <a href="#"
+          ><span style="font-weight: bold;">グエン・ゴック・ハイ</span></a
+        >
+      </div>
+      <div>
+        <span class="time" style="font-size: 13px; color: #606770;"
+          >20 分</span
+        >
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <p style="font-size: 14px; box-sizing: border-box; padding: 0 10px;">
+      iTunesのPodcastコーナーの運営は、iTunes側が行っており、同コーナーの更新が遅れることがあるようです。ＮＨＫでは「ラジオニュース」の音声のご提供を２４時間に限らせていただいているため、それよりも古いニュースはお聞きになれません。そのため、iPhoneから直接ニュースをダウンロードすることができなくなる場合があります。その際はご面倒でもいったんパソコンにニュースをダウンロードしてからiPhoneを同期していただきますと、最新ニュースがお聞きになれます。
+また、iPhone上で、iTunes Storeを経ずに、直接、Podcastの音声をダウンロードできるアプリも第三者が提供しているようです（アプリのご使用はご自身の責任で行ってくださいますようお願いいたします）。
+    </p>
+  </div>
+  <div class="img-post">
+      <%= image_tag "Naruto.png", :style => "width: 100%; height: 100%; border-radius: 5px;" %>
+  </div>
+  <div class="interactive">
+    <div class="total-likes-shares">
+      <div class="total-likes">
+        <div>
+          <%= image_tag "facebook.png", :class => "img-like-circle" %>
+        </div>
+        <div><span style="font-size: 14px; color: #606770;">2</span></div>
+      </div>
+      <div class="total-shares">
+        <span style="font-size: 13px; color: #606770;">2 コメント</span>
+        <span style="font-size: 13px; color: #606770;">3 シェア数</span>
+      </div>
+    </div>
+    <div class="line-short"></div>
+    <div class="selection-bar">
+      <div>
+        <a class="btn-like" like="unlike"
+          ><%= image_tag "like.png" %><span>好き</span></a
+        >
+      </div>
+      <div class="comment">
+        <div>
+          <a class="btn-comment"
+            ><%= image_tag "comment.png" %><span
+              >コメント</span
+            ></a
+          >
+        </div>
+        <div class="post-comment">
+          <div class="comment-element">
+          </div>
+          <div style="position: relative; left: 72px; display: none;">
+          </div>
+          <div class="input-comment">
+            <div>
+              <%= image_tag "avatar.jpg" %>
+            </div>
+            <div>
+              <input
+                class="input-submit"
+                type="text"
+                placeholder="Viết bình luận..."
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <a><%= image_tag "share.png" %><span>シェア</span></a>
+      </div>
+    </div>
+    <div class="line-long" id="123"></div>
+  </div>
+</div>

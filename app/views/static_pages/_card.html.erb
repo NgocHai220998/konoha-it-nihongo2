@@ -1,10 +1,10 @@
 <div class="carousel-item active">
   <div class="container row">
-    <% @posts_most_active.slice(0,3).each do |post| %> 
+    <% @posts_most_active.slice(0,4).each do |post| %> 
     <div class="col-3">
       <div class="card" style="background-size: cover; width: 18rem; background-image: url('<%=post.image_url%>');max-width:100%;height:auto;">
         <div class="card-body">
-          <p class="card-text my-card-text" style=" overflow-y: hidden;" ><%=post.content%></p>
+          <p class="card-text my-card-text" style=" overflow-y: hidden; color: white" ><%=post.content%></p>
           <%=link_to t(".details"), post, class: "card-link"%>
         </div>
       </div>
@@ -15,11 +15,11 @@
 <% if @posts_most_active.length() > 4 %>
   <div class="carousel-item">
     <div class="container row">
-      <% @posts_most_active.slice(4,7).each do |post| %> 
+      <% @posts_most_active.slice(4,8).each do |post| %> 
       <div class="col-3">
-        <div class="card" style="background-size: cover; width: 18rem; background-image: url('https://vinmec-prod.s3.amazonaws.com/images/20190801_095028_139788_em_be.max-800x800.jpg')">
+        <div class="card" style="background-size: cover; width: 18rem; background-image: url('<%=post.image_url%>');max-width:100%;height:auto;">
           <div class="card-body">
-            <p class="card-text my-card-text" style="overflow-y: hidden;" ><%=post.content%></p>
+            <p class="card-text my-card-text" style="overflow-y: hidden;color: white" ><%=post.content%></p>
             <%=link_to t(".details"), post, class: "card-link"%>
           </div>
         </div>
