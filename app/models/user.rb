@@ -29,11 +29,11 @@ class User < ApplicationRecord
             size: { 
               less_than: Settings.model.user.validates.image.maximum.megabytes
             }
-  validates :age,
-            length: { 
-              minimum: Settings.model.user.validates.age.minimum,
-              maximum: Settings.model.user.validates.age.maximum
-            }
+  # validates :age,
+  #           length: { 
+  #             minimum: Settings.model.user.validates.age.minimum,
+  #             maximum: Settings.model.user.validates.age.maximum
+  #           }
   def authenticate(login_password)
     if login_password == password
       return true
